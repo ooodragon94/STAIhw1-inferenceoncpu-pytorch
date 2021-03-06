@@ -69,15 +69,19 @@ class NumPyNetwork:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Network Training')
     parser.add_argument('--data_path', default='./data', type=str, help='path to dataset')
-    parser.add_argument('--workers', default=8, type=int, help='number of data loading workers')
-    parser.add_argument('--print_freq', default=50, type=int, help='print frequency')
+    parser.add_argument('--workers', default=2, type=int, help='number of data loading workers')
+    parser.add_argument('--batch_sizes', default=[1,32], nargs='*')
 
     args = parser.parse_args()
 
     params = torch.load('params.pth')
-    batch_sizes = [1, 32]
-    for batch_size in batch_sizes:
 
+    # changes str to int
+    batch_sizes = args.batch_sizes
+    batch_sizes = [int(batch_size) for batch_size in args.batch_sizes]
+
+    for batch_size in batch_sizes:
+        print(f'testing with batch size: {batch_size}')
         args.batch_size = batch_size
         train_loader, val_loader, criterion = get_mnist_utils(args)
         np_model = NumPyNetwork(params['fc1.weight'], params['fc1.bias'], params['fc2.weight'],
@@ -88,4 +92,4 @@ if __name__ == '__main__':
             np_model.forward(input)
         toc = time.time()
 
-        print(f'total seconds taken: {toc-tic}')
+        print(f'total seconds taken: \033[93m{toc-tic}\033[0m')
