@@ -1,7 +1,6 @@
 import argparse
 
 import torch
-import numpy as np
 from torch import nn
 import torch.nn.functional as F
 from torchvision import datasets
@@ -100,7 +99,6 @@ def validate(model, val_loader, criterion, epoch, args):
         with torch.no_grad():
             input = input.reshape(-1, 28 * 28).cuda()
             target = target.cuda()
-            optimizer.zero_grad()
             output = model(input)
             loss = criterion(output, target)
 
