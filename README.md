@@ -23,7 +23,11 @@ This will run inference on cpu with saved "params.pth" and show the time taken f
 Batchwise multiplication is implemented using numpy [ensum](https://numpy.org/doc/stable/reference/generated/numpy.einsum.html).
 
 ## Results
-Following pictures show the run time and accuracy (accuracy should be the same since it loaded same parameters) for batch sizes 4, 8, 16, 32, 64 respectively.
+Following pictures show the run time and accuracy (accuracy should be the same since it loaded same parameters) for batch sizes 1, 2, 4, 8, 16, 32, 64 respectively.
+
+![batch4](./imgs/batch1.png)
+
+![batch8](./imgs/batch2.png)
 
 ![batch4](./imgs/batch4.png)
 
@@ -34,6 +38,8 @@ Following pictures show the run time and accuracy (accuracy should be the same s
 ![batch32](./imgs/batch32.png)
 
 ![batch64](./imgs/batch64.png)
+
+Running it multiple times didn't change the time taken by any huge amount.
 
 ## Question
 My cpu's specification is as following...
