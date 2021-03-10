@@ -41,7 +41,7 @@ Following pictures show the run time and accuracy (accuracy should be the same s
 
 Running it multiple times didn't change the time taken by any huge amount.
 
-## Question
+## Questions and Answering
 My cpu's specification is as following...
 
 ![cpuspec1](./imgs/mycpu1.png)
