@@ -25,13 +25,22 @@ Batchwise multiplication is implemented using numpy [ensum](https://numpy.org/do
 ## Results
 Following pictures show the run time and accuracy (accuracy should be the same since it loaded same parameters) for batch sizes 4, 8, 16, 32, 64 respectively.
 ![batch4](./imgs/batch4.png)
+
 ![batch8](./imgs/batch8.png)
+
 ![batch16](./imgs/batch16.png)
+
 ![batch32](./imgs/batch32.png)
+
 ![batch64](./imgs/batch64.png)
+
 ## Question
 My cpu's specification is as following...
+
 ![cpuspec1](./imgs/mycpu1.png)
+
 ![cpuspec2](./imgs/mycpu2.png)
+
 cpus that have cache memory of 8MB is following... (intel i5 series)
+
 ![L3CPU](./imgs/L38MBcpus.png)
