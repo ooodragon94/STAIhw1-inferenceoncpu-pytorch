@@ -24,6 +24,7 @@ Batchwise multiplication is implemented using numpy [ensum](https://numpy.org/do
 
 ## Results
 Following pictures show the run time and accuracy (accuracy should be the same since it loaded same parameters) for batch sizes 4, 8, 16, 32, 64 respectively.
+
 ![batch4](./imgs/batch4.png)
 
 ![batch8](./imgs/batch8.png)
